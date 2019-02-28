@@ -27,7 +27,7 @@ configureMiddleware(server);
 
 server.post("/register", register);
 server.post("/login", login);
-// server.post("/post", verifySession, post);
+server.post("/post", verifySession, post);
 // server.get("/getFeed", verifySession, getFeed);
 // server.post("/like/:id", verifySession, like);
 // server.post("/comment/:id", verifySession, comment);

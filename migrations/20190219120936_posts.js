@@ -1,4 +1,5 @@
 exports.up = knex =>
+  // knex.schema.dropTableIfExists("posts");
   knex.schema.createTable("posts", posts => {
     posts.increments();
 
@@ -25,4 +26,4 @@ exports.up = knex =>
     // posts.array();
   });
 
-exports.down = knex => knex.schema.dropTableIfExists("users");
+exports.down = knex => knex.schema.dropTableIfExists("posts");

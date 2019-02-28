@@ -1,11 +1,12 @@
 const bcrypt = require("bcryptjs");
 const db = require("../../data/dbConfig.js");
 const jwt = require("jsonwebtoken");
-const jwtSecret = process.env.JWT_SECRET;
+// const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = "hello";
 
 function generateToken({ username }) {
-  const paylod = { username };
-  const options = { expiersIn: "1d" };
+  const payload = { username };
+  const options = { expiresIn: "1d" };
 
   return jwt.sign(payload, jwtSecret, options);
 }
