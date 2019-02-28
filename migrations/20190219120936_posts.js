@@ -23,7 +23,7 @@ exports.up = knex =>
     // short description underneath post
     posts.string("description", 128);
 
-    // posts.array();
+    
   });
 
 exports.down = knex => knex.schema.dropTableIfExists("posts");
